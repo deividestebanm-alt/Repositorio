@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Patacón Dorado — Patacones gigantes, mix de carnes, papa ángel y mazorcadas. Pide en línea.">
+  <title>Patacón Dorado | Patacones, mazorcadas y mix de carnes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="patacon.css">
+</head>
+<body>
+
+  <div class="fire-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Patacón Dorado, ir al inicio">
+        <span class="logo__icon" aria-hidden="true">🍌</span>
+        <span class="logo__text">Patacón <strong>Dorado</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#combos" class="nav__link">Estrellas</a></li>
+          <li><a href="#menu" class="nav__link">Menú</a></li>
+          <li><a href="#como-pedir" class="nav__link">Cómo pedir</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Abrir carrito">
+          <span aria-hidden="true">🛒</span>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">🔥 Crocantes por fuera, suaves por dentro</p>
+          <h1 class="hero__title">El <span>patacón</span> más cargado de la ciudad</h1>
+          <p class="hero__text">Plátano verde doble fritura, mix de carnes, papa ángel crocante y mazorcadas con trozos de patacón. Arma tu antojo y te lo llevamos calientico.</p>
+          <div class="hero__buttons">
+            <a href="#menu" class="btn btn--primary">Ver el menú</a>
+            <a href="#combos" class="btn btn--outline">Las estrellas ⭐</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>17</strong><span>antojos</span></li>
+            <li><strong>25'</strong><span>entrega aprox.</span></li>
+            <li><strong>2x</strong><span>fritura crocante</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__art" id="heroArt"></div>
+          <span class="float float--1">🥩</span>
+          <span class="float float--2">🌽</span>
+          <span class="float float--3">🍟</span>
+          <span class="float float--4">🧀</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRELLAS -->
+    <section class="section stars" id="combos">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Las más pedidas</p>
+          <h2 class="section__title">Antojos estrella ⭐</h2>
+          <p class="section__subtitle">Los que no pueden faltar en tu mesa.</p>
+        </header>
+        <div class="stars__grid" id="starsGrid"></div>
+      </div>
+    </section>
+
+    <!-- MENÚ -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Nuestro menú</p>
+          <h2 class="section__title">Escoge tu antojo</h2>
+          <p class="section__subtitle">Todo se prepara al momento, con plátano verde fresco.</p>
+        </header>
+
+        <div class="filters" role="tablist" aria-label="Filtrar por categoría">
+          <button class="filter is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="clasicos" role="tab" aria-selected="false">🍌 Clásicos</button>
+          <button class="filter" data-filter="carnes" role="tab" aria-selected="false">🥩 Mix de carnes</button>
+          <button class="filter" data-filter="papa" role="tab" aria-selected="false">🍟 Papa ángel</button>
+          <button class="filter" data-filter="mazorcada" role="tab" aria-selected="false">🌽 Mazorcadas</button>
+          <button class="filter" data-filter="bebidas" role="tab" aria-selected="false">🥤 Bebidas y extras</button>
+        </div>
+
+        <div class="products" id="products" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CÓMO PEDIR -->
+    <section class="section steps" id="como-pedir">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Fácil y rápido</p>
+          <h2 class="section__title">¿Cómo pedir?</h2>
+        </header>
+        <ol class="steps__list">
+          <li class="step"><span class="step__icon" aria-hidden="true">🍌</span><h3 class="step__title">1. Elige</h3><p class="step__text">Agrega al carrito los patacones, mazorcadas y bebidas que te antojen.</p></li>
+          <li class="step"><span class="step__icon" aria-hidden="true">📝</span><h3 class="step__title">2. Confirma</h3><p class="step__text">Escribe tu nombre, dirección y método de pago.</p></li>
+          <li class="step"><span class="step__icon" aria-hidden="true">💬</span><h3 class="step__title">3. Envía</h3><p class="step__text">Tu pedido nos llega por WhatsApp y lo freímos al instante.</p></li>
+          <li class="step"><span class="step__icon" aria-hidden="true">🛵</span><h3 class="step__title">4. Disfruta</h3><p class="step__text">Recíbelo calientico y crocante en tu puerta.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="section__eyebrow">Contacto</p>
+          <h2 class="section__title">Visítanos o escríbenos</h2>
+          <ul class="contact__list">
+            <li><span aria-hidden="true">📍</span> Calle 00 # 00-00, Bogotá (dirección de ejemplo)</li>
+            <li><span aria-hidden="true">🕒</span> Martes a domingo, 11:00 a. m. – 11:00 p. m.</li>
+            <li><span aria-hidden="true">📞</span> +57 300 000 0000</li>
+            <li><span aria-hidden="true">✉️</span> hola@patacondorado.co</li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <h3 class="contact__form-title">Déjanos un mensaje</h3>
+          <div class="field"><label for="contactName">Nombre</label><input type="text" id="contactName" placeholder="Tu nombre" required><small class="field__error"></small></div>
+          <div class="field"><label for="contactEmail">Correo</label><input type="email" id="contactEmail" placeholder="tucorreo@ejemplo.com" required><small class="field__error"></small></div>
+          <div class="field"><label for="contactMessage">Mensaje</label><textarea id="contactMessage" rows="4" placeholder="¿En qué te ayudamos?" required></textarea><small class="field__error"></small></div>
+          <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="fire-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--light">
+        <span class="logo__icon" aria-hidden="true">🍌</span>
+        <span class="logo__text">Patacón <strong>Dorado</strong></span>
+      </a>
+      <p class="footer__text">Prototipo académico · <span id="year"></span></p>
+      <a href="#inicio" class="footer__top" aria-label="Volver arriba">↑</a>
+    </div>
+  </footer>
+
+  <!-- CARRITO -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart__header">
+      <h2 class="cart__title">Tu pedido</h2>
+      <button class="cart__close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart__body">
+      <p class="cart__empty" id="cartEmpty">Tu carrito está vacío.<br>¡Agrega un patacón! 🍌</p>
+      <ul class="cart__items" id="cartItems"></ul>
+    </div>
+    <div class="cart__footer" id="cartFooter">
+      <div class="cart__row"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <div class="cart__row"><span>Domicilio</span><span id="cartDelivery">$0</span></div>
+      <div class="cart__row cart__row--total"><span>Total</span><span id="cartTotal">$0</span></div>
+      <p class="cart__hint" id="cartHint"></p>
+
+      <form class="checkout" id="checkoutForm" novalidate>
+        <div class="field"><label for="customerName">Nombre</label><input type="text" id="customerName" placeholder="¿A nombre de quién?" required><small class="field__error"></small></div>
+        <div class="field"><label for="customerAddress">Dirección</label><input type="text" id="customerAddress" placeholder="Calle, número, barrio" required><small class="field__error"></small></div>
+        <div class="field">
+          <label for="paymentMethod">Método de pago</label>
+          <select id="paymentMethod">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Datáfono">Datáfono</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--whatsapp btn--block">Pedir por WhatsApp 💬</button>
+        <button type="button" class="btn btn--ghost btn--block" id="cartClear">Vaciar carrito</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="patacon.js"></script>
+</body>
+</html>
